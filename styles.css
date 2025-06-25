@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #333;
+  line-height: 1.6;
+  background-color: white;
+}
+
+.header {
+  background-color: #33292a;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  color: #e9877b;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+/* Hero */
+.hero {
+  background-image: url("images/Úvod.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 40px;
+}
+
+.hero-text {
+  color: white;
+  padding: 30px;
+  border-radius: 5px;
+  max-width: 400px;
+  text-align: right;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  color: white;
+}
+
+.section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* About */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.about img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 5px;
+}
+
+.about div {
+  max-width: 500px;
+}
+
+/* What we do */
+.what-we-do {
+  background-color: #33292a;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Icons */
+.icons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.icons div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  font-size: 14px;
+}
+
+.icons img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  text-align: center;
+}
+
+.gallery img,
+.gallery .trip-text {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.trip-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Where to go */
+.where-to-go {
+  background-color: #704c4c;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.where-to-go button,
+.cta-button {
+  background-color: #efa69d;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Reviews */
+.reviews {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.review-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.review {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.review img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Footer Gallery */
+.footer-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0;
+  margin-top: 40px;
+}
+
+.footer-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+footer {
+  background-color: #2e1d1d;
+  color: white;
+  text-align: center;
+  font-size: 10px;
+  padding: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .icons {
+    flex-direction: column;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery .trip-text {
+    height: 80px;
+  }
+
+  .footer-gallery {
+    grid-template-columns: 1fr;
+  }
+}
